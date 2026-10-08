@@ -1,6 +1,6 @@
 {
   "name": "@nxlv-ai/jevify-mcp",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Local, offline MCP server for jevify: find the AI calls in your code that are really decisions, then plan their migration to JEV in shadow mode.",
   "type": "module",
   "bin": {
