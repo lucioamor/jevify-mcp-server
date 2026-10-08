@@ -18,21 +18,18 @@ It is the engine behind the [jevify skills](https://github.com/lucioamor/jevify)
 
 ## Install
 
-Requires Node.js 20 or newer.
-
-```bash
-git clone https://github.com/lucioamor/jevify-mcp-server.git
-cd jevify-mcp-server
-npm install
-npm run build
-```
-
-Then register `dist/server.js` with your client.
+Requires Node.js 20 or newer. Published on npm as [`@nxlv-ai/jevify-mcp`](https://www.npmjs.com/package/@nxlv-ai/jevify-mcp); `npx` fetches and runs it, so there is nothing to install by hand.
 
 **Claude Code**
 
 ```bash
-claude mcp add jevify -- node /absolute/path/to/jevify-mcp-server/dist/server.js
+claude mcp add jevify -- npx -y @nxlv-ai/jevify-mcp
+```
+
+**Codex**
+
+```bash
+codex mcp add jevify -- npx -y @nxlv-ai/jevify-mcp
 ```
 
 **Cursor, Claude Desktop and other clients** (`mcpServers` config)
@@ -41,12 +38,14 @@ claude mcp add jevify -- node /absolute/path/to/jevify-mcp-server/dist/server.js
 {
   "mcpServers": {
     "jevify": {
-      "command": "node",
-      "args": ["/absolute/path/to/jevify-mcp-server/dist/server.js"]
+      "command": "npx",
+      "args": ["-y", "@nxlv-ai/jevify-mcp"]
     }
   }
 }
 ```
+
+On Windows clients that cannot spawn `npx` directly, use `"command": "cmd"` with `"args": ["/c", "npx", "-y", "@nxlv-ai/jevify-mcp"]`.
 
 ## Local or hosted
 
@@ -63,7 +62,9 @@ Both use the same classifier and migration planner, so findings match for the sa
 ## Development
 
 ```bash
-npm run check   # typecheck, tests, build
+npm install
+npm run check   # typecheck, build, tests
+node dist/server.js
 ```
 
 `src/engine/` holds the classifier, detector, report contract, migration planner and Markdown renderer. `src/server.ts` exposes them over stdio.
@@ -76,7 +77,7 @@ npm run check   # typecheck, tests, build
 
 ## Authorship and maintenance
 
-This project was created by [Lucio Amorim](https://linkedin.com/in/lucioamorim), Lovable Ambassador.
+This project was created by [Lucio Amorim](https://linkedin.com/in/lucioamorim), Lovable Partner.
 
 When reusing, redistributing, or citing this work, keep the attribution credits and include a link to this repository.
 
