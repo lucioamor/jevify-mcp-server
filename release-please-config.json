@@ -3,7 +3,7 @@
   "packages": {
     ".": {
       "release-type": "node",
-      "package-name": "@nxlv-ai/jevify-mcp",
+      "package-name": "@nxlv-ai/jevify",
       "changelog-path": "CHANGELOG.md"
     }
   }

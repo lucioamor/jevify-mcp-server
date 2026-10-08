@@ -2,7 +2,7 @@
 
 ## Releases require Conventional Commits
 
-This repo publishes `@nxlv-ai/jevify-mcp` to npm through
+This repo publishes `@nxlv-ai/jevify` to npm through
 [release-please](https://github.com/googleapis/release-please). Only
 Conventional Commits move the version:
 

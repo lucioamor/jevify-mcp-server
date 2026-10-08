@@ -18,18 +18,18 @@ It is the engine behind the [jevify skills](https://github.com/lucioamor/jevify)
 
 ## Install
 
-Requires Node.js 20 or newer. Published on npm as [`@nxlv-ai/jevify-mcp`](https://www.npmjs.com/package/@nxlv-ai/jevify-mcp); `npx` fetches and runs it, so there is nothing to install by hand.
+Requires Node.js 20 or newer. Published on npm as [`@nxlv-ai/jevify`](https://www.npmjs.com/package/@nxlv-ai/jevify); `npx` fetches and runs it, so there is nothing to install by hand.
 
 **Claude Code**
 
 ```bash
-claude mcp add jevify -- npx -y @nxlv-ai/jevify-mcp
+claude mcp add jevify -- npx -y @nxlv-ai/jevify
 ```
 
 **Codex**
 
 ```bash
-codex mcp add jevify -- npx -y @nxlv-ai/jevify-mcp
+codex mcp add jevify -- npx -y @nxlv-ai/jevify
 ```
 
 **Cursor, Claude Desktop and other clients** (`mcpServers` config)
@@ -39,13 +39,13 @@ codex mcp add jevify -- npx -y @nxlv-ai/jevify-mcp
   "mcpServers": {
     "jevify": {
       "command": "npx",
-      "args": ["-y", "@nxlv-ai/jevify-mcp"]
+      "args": ["-y", "@nxlv-ai/jevify"]
     }
   }
 }
 ```
 
-On Windows clients that cannot spawn `npx` directly, use `"command": "cmd"` with `"args": ["/c", "npx", "-y", "@nxlv-ai/jevify-mcp"]`.
+On Windows clients that cannot spawn `npx` directly, use `"command": "cmd"` with `"args": ["/c", "npx", "-y", "@nxlv-ai/jevify"]`.
 
 ## Local or hosted
 
